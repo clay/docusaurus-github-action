@@ -11,6 +11,14 @@ else
   echo "PROJECT_NAME is set to '$PROJECT_NAME'"
 fi
 
+# Make sure BUILD_DIR is set and default to website
+if [ -z ${BUILD_DIR+x} ]; then
+  echo "BUILD_DIR is not set, falling back to default"
+  export BUILD_DIR="website"
+else
+  echo "BUILD_DIR is set to '$BUILD_DIR'"
+fi
+
 SSH_PATH="/root/.ssh"
 
 mkdir "$SSH_PATH"
