@@ -8,7 +8,7 @@ The project uses [repo deploy keys](https://developer.github.com/v3/guides/manag
 
 ```
 workflow "Build Docs" {
-  on = "pull_request"
+  on = "push"
   resolves = ["Deploy Docs"]
 }
 
